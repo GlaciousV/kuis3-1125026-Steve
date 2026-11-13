@@ -44,27 +44,36 @@ public abstract class DataView<T> {
     public void showInsertForm() {
         String[] fields = this.getFields();
         String[] values = new String[fields.length];
-
+        
         for (int i = 0; i < fields.length; i++) {
             System.out.print("inputt " + fields[i] + ": ");
             values[i] = scanner.nextLine();
         }
-
+        
         T newData = convertValuesToModel(values);
         Data.add(newData);
         System.out.println("Data berhasil ditambahkan.");
     };
-
+    
     public void showUpdateForm() {
         String pk = scanner.next()
         for (int i = 0; i < DataList.size(); i++) {
-            if (getPrimaryKeyValue(DataList.get(i).equals(pk)))
-            System.out.print("inputt " + fields[i] + ": ");
+            if (getPrimaryKeyValue(DataList.get(i).equals(pk))) {
+
+                String[] fields = this.getFields();
+                String[] values = new String[fields.length];
+                for (int j = 0; j fields.length;j++) {
+                    System.out.println("input " + fields[j]+  "baru" );
+                    values [j] = scanner.nextLine
+                }
+            }
             values[i] = scanner.nextLine();
         }
     };
 
     public void promptDelete() {
+        System.out.println("input yg mau dihapus");
+        
     };
 
     protected abstract String getPrimaryKeyValue(T data);

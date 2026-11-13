@@ -3,7 +3,7 @@ package model;
 public class MahasiwaDataView extends DataView<Mahasiswa> {
     @Override
     protected String getPrimaryKeyValue(Mahasiswa data) {
-        return null;
+        return data.getNim();
     }
 
     @Override
@@ -18,10 +18,10 @@ public class MahasiwaDataView extends DataView<Mahasiswa> {
 
     @Override
     protected String[] convertModelToValues(Mahasiswa data) {
-        return new String[]{ 
+        return new String[] {
             data.getNim(),data.getNama(), data.getEmail(), String.valueOf(data.getUmur())
         };
-    
+    }
 
 
 }
