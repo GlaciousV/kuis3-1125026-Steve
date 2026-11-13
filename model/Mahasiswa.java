@@ -1,6 +1,6 @@
 package model;
 
-public class Mahasiswa {
+public class Mahasiswa  {
     private String nim;
     private String nama;
     private String email;
@@ -27,6 +27,12 @@ public class Mahasiswa {
         return umur;
     }
     public void setUmur(int umur) {
+        this.umur = umur;
+    }
+    public Mahasiswa(String nim, String nama, String email, int umur) {
+        this.nim = nim;
+        this.nama = nama;
+        this.email = email;
         this.umur = umur;
     }
 
